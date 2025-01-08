@@ -1,0 +1,73 @@
+@keyframes glitch {
+    0% {
+      transform: translate(0, 0);
+      clip-path: inset(0 0 0 0);
+      color: red;
+    }
+    10% {
+      transform: translate(-3px, -3px);
+      clip-path: inset(5% 0 60% 0);
+      color: blue;
+    }
+    20% {
+      transform: translate(3px, 3px);
+      clip-path: inset(70% 0 10% 0);
+      color: white;
+    }
+    30% {
+      transform: translate(-2px, -2px);
+      clip-path: inset(20% 0 50% 0);
+      color: cyan;
+    }
+    40% {
+      transform: translate(2px, 2px);
+      clip-path: inset(40% 0 20% 0);
+      color: magenta;
+    }
+    50% {
+      transform: translate(0, 0);
+      clip-path: inset(0 0 0 0);
+      color: white;
+    }
+    100% {
+      transform: translate(0, 0);
+      clip-path: inset(0 0 0 0);
+      color: white;
+    }
+  }
+  .invisible {
+    opacity: 0; /* Make the input field invisible */
+    position: absolute; /* Prevent it from affecting layout */
+    pointer-events: none; /* Prevent it from being clicked */
+  }
+  
+  #locked-content:hover .invisible {
+    pointer-events: auto; /* Allow typing when hovered */
+    opacity: 1; /* (Optional) Make visible on hover if desired */
+  }
+body {
+    font-family: Garamond;
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: red;
+    animation: glitch 0.5s ease-in-out 3s;
+  }
+  #countdown {
+    font-size: 5em;
+    margin: 300px;
+    font-weight: bolder;
+    position: relative;
+    color: white;
+    animation: glitch 0.5s ease-in-out;
+  }
+  #locked-content {
+    display: none;
+    margin-top: 20px;
+    color: white;
+  }
+  #name-display {
+    font-weight: bold;
+    color: red; /* The color of the text as the user types */
+  }
+  
