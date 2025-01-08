@@ -59,7 +59,7 @@ body {
     font-weight: bolder;
     position: relative;
     color: white;
-    animation: glitch 0.5s ease-in-out;
+    animation: glitch 0.5s ease-in-out 1s;
   }
   #locked-content {
     display: none;
