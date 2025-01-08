@@ -4,7 +4,7 @@ const debugMode = new URLSearchParams(window.location.search).has('debug');
 // Set the target date for the countdown
 const targetDate = debugMode
   ? new Date().getTime() + 3 * 1000 // 3 seconds from now
-  : new Date("2025-01-18T20:00:00").getTime(); // Replace with your desired date
+  : new Date("2025-01-17T20:00:00").getTime(); // Replace with your desired date
 
 const countdownElement = document.getElementById("countdown");
 const lockedContent = document.getElementById("locked-content");
